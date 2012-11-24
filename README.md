@@ -1,1 +1,1 @@
-Tgroup Admin panels
+Tgroup Admin panel
