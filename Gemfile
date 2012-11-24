@@ -41,4 +41,9 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+group :development do
+  gem 'taps'
+  gem 'rvm'
+end
+
 
