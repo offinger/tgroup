@@ -34,6 +34,11 @@
       </file>
     </leaf>
   </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
@@ -45,6 +50,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20121124191848_add_references.rb" />
         <option value="$PROJECT_DIR$/app/models/model.rb" />
         <option value="$PROJECT_DIR$/README.rdoc" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -555,9 +561,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.rdoc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+        <state line="0" column="18" selection-start="0" selection-end="18" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
