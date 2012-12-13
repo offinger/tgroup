@@ -2,13 +2,85 @@
 <html>
 <head>
   <title>Tgroup</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+  <%= stylesheet_link_tag    "mapa", :media => "all" %>
+  <%= stylesheet_link_tag    "style-red", :media => "all" %>
   <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body onload="MM_preloadImages('<%= asset_path "button2.png" %>')">
+
+	<div id="bodypat">
+	<section id="container">
+	    <div id="colorchanger">
+	    <a href="contactca00.html?theme=blue"  ><span class="">Tw Steel</span></a>
+	    <a href="contact0e99.html?theme=red" ><span class="">Time Force</span></a>
+	    <a href="brend.html"  ><span class="">Cover</span></a>
+	    <a href="contactf3cb.html?theme=magenta" ><span class="">Doxa</span></a>
+	    <a href="contact938c.html?theme=purple" ><span class="">Philip Watch</span></a>
+	    <a href="contact4d49.html?theme=teal" ><span >Miss Sixty</span></a>
+	    <a href="contact0f94.html?theme=lime"><span >John Galliano</span></a>
+	    <a href="contact8e01.html?theme=brown"><span >Maserati</span></a>
+	    <h4>Pogledaj brend &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp</h4>
+	    </div>
+	<!-- BEGIN HEADER -->
+	<header class="clearfix">
+	<!-- BEGIN LOGO -->
+	<a href="index.html"><img id="headerlink"  src="<%= asset_path "logo.png" %>" alt="logo"/></a>
+	<!-- END LOGO -->
+
+	<!-- BEGIN NAVIGATION -->
+	<nav>
+	<ul id="nav" class="clearfix">
+	<!-- Menu Item 1 -->
+		<li class="<%= 'current' if params[:controller] == 'home' %>"><%= link_to "Home", :controller => :home, :action => :index %></a></li>
+	<!-- Menu Item 2 -->
+	    <li class="<%= 'current' if params[:controller] == 'brends' %>">
+	    	<%= link_to "Brendovi", :controller => :brends, :action => :index %></a>
+	        <ul>
+	        	<li><a href="brendovi.html" title="Tw Steel"><span>Tw Steel</span></a></li>
+	            <li><a href="#" title="Time Force"><span>Time Force</span></a></li>
+	            <li><a href="brend.html" title="Cover"><span>Cover</span></a></li>
+	            <li><a href="#" title="Doxa"><span>Doxa</span></a></li>
+	            <li><a href="#" title="Philip Watch"><span>Philip Watch</span></a></li>
+	            <li><a href="#" title="Miss Sixty"><span>Miss Sixty</span></a></li>
+	            <li><a href="#" title="John Galliano"><span>John Galliano</span></a></li>
+	            <li><a href="#" title="Maserati"><span>Maserati</span></a></li>
+	        </ul>
+	    </li>
+	<!-- Menu Item 3 -->
+	    <li class="<%= 'current' if params[:controller] == '' %>"><a href="#" title="Servis"><span>Servis</span></a>
+
+	    </li>
+	<!-- Menu Item 4 -->
+	    <li class="<%= 'current' if params[:controller] == '' %>"><a href="aboutus.html" title="O nama"><span>O nama</span></a></li>
+	<!-- Menu Item 6 -->
+	    <li  class="<%= 'current' if params[:controller] == 'contact' %>"><%= link_to "Kontakt", :controller => :contact, :action => :index %></a></li>
+	</ul>
+	</nav>
+	<!-- END NAVIGATION -->
+	</header>
+	<!-- END HEADER -->
+
 
 <%= yield %>
 
+<!-- BEGIN FOOTER -->
+<footer class="clearfix">
+
+<div id="footer-social">
+<a href="#"><span class="facebook-mini"></span></a>
+<a href="#"><span class="twitter-mini"></span></a>
+</div><!-- end #footer-social -->
+
+<small>Copyright &#169; 2012 Tgroup.Co</small>
+</footer>
+<!-- END FOOTER -->
+
+</section><!-- end #container -->
+</div>
 </body>
+
 </html>

@@ -2,23 +2,28 @@ class BrendsController < ApplicationController
   # GET /brends
   # GET /brends.json
   def index
-    @brends = Brend.all
+    
+    @brends = Brend.order("brends.id DESC")
+    
+    
+    
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @brends }
     end
   end
+  
+  
 
   # GET /brends/1
   # GET /brends/1.json
   def show
-    @brend = Brend.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @brend }
-    end
+    
+    
+    @models = Model.where(["brend_id = ?", params[:brend_id]])
+    
+    
   end
 
   # GET /brends/new

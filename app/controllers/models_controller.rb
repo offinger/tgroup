@@ -2,18 +2,19 @@ class ModelsController < ApplicationController
   # GET /models
   # GET /models.json
   def index
-    @models = Model.all
+   
+  # @models = Model.find(params[:id])
+  @models = Model.where(["brend_id = ?", params[:brend_id]])
+  
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @models }
-    end
+   
   end
+
 
   # GET /models/1
   # GET /models/1.json
   def show
-    @model = Model.find(params[:id])
+    @model = Model.find(params[:brend_id])
 
     respond_to do |format|
       format.html # show.html.erb

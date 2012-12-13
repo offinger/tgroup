@@ -1,23 +1,29 @@
-<h1>Listing brends</h1>
+<!-- BEGIN CONTENT -->
+<section id="content" class="clearfix">
+<!-- Title --><div id="content-title">Brendovi</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<!-- BEGIN LEFT CONTENT -->
+<section id="portfoliotile-left">
 
+<!-- BEGIN TILE CONTENT -->
+<div id="portfolio" class="clearfix centered">
+
+<!-- Link -->
 <% @brends.each do |brend| %>
-  <tr>
-    <td><%= brend.name %></td>
-    <td><%= link_to 'Show', brend %></td>
-    <td><%= link_to 'Edit', edit_brend_path(brend) %></td>
-    <td><%= link_to 'Destroy', brend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+	<div class="tile large illustration">
+	
+    <%= link_to  :controller => "brends", :action => "show", :brend_id => brend.id  do%>
+    <div class="pl-projecttitle"><span class="pl-title"><%= brend.name %><br>test</span></div>
+    <img class="tile-pre-img" src="<%=asset_path brend.photo %>" alt="Project 1" />
+    <% end %>
+    </div>
 <% end %>
-</table>
+<!-- Kraj linka -->
 
-<br />
 
-<%= link_to 'New Brend', new_brend_path %>
+
+    
+</div><!-- end #portfolio -->
+<!-- END TILE CONTENT -->
+</section>
+<!-- END LEFT CONTENT -->

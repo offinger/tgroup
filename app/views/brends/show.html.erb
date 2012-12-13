@@ -1,10 +1,53 @@
-<p id="notice"><%= notice %></p>
+<!-- BEGIN CONTENT -->
+<section id="content" class="clearfix">
+<!-- Title --><div id="content-title">Cover</div>
 
-<p>
-  <b>Name:</b>
-  <%= @brend.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_brend_path(@brend) %> |
-<%= link_to 'Back', brends_path %>
+<!-- BEGIN LEFT CONTENT -->
+<section id="portfoliotile-left">
+<!-- BEGIN FILTER -->
+<div id="filter" class="clearfix">
+<ul id="port-filter">
+	<li class="filter-current"><a href="#">All</a></li>
+    <li><a href="#">Satovi</a></li>
+    <li><a href="#">Nakit</a></li>
+</ul>
+</div>
+<!-- END FILTER -->
+<!-- Link -->
+<!-- BEGIN TILE CONTENT -->
+<div id="portfolio" class="clearfix centered">
+<!-- Nova stranica-->
+	<% @models.each do |model| %>
+	<div class="tile large satovi">
+    <a href="#<%= model.id %>" class="lightbox" rel="section">
+    <div class="pl-projecttitle"><span class="pl-title"><%= model.name %></span></div>
+    <img class="tile-pre-img" src="<%=asset_path model.photo %>" alt="Project 1" />
+    </a>
+    </div>
+    <!-- Lightbox Article Preview -->
+    <div class="tile-pre">
+    <article id="<%= model.id %>" class="lb-article">
+    <div class="article-img">
+        <div class="flexslider postslide">
+        <ul class="slides">
+    	<li>
+        <img class="tile-pre-img" src="<%=asset_path model.photo %>" alt="Article 1" />
+        </li>
+        </ul>
+        </div>
+    </div>
+    
+    <h1 class="lb-title"><%= model.name %></h1>
+    <span class="postcat redtxt"><%= model.name %></span>
+    <div class="lb-excerpt">
+        <p><%= model.description %></b>...</p>
+        <p><a class="exp-button" href="singleblogpost-1.html">Read More &#8594;</a></p>
+    </div>
+    </article>
+    </div>
+<% end %>
+    
+</div><!-- end #portfolio -->
+<!-- END TILE CONTENT -->
+</section>
+<!-- END LEFT CONTENT -->

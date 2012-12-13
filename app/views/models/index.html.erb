@@ -1,31 +1,29 @@
-<h1>Listing models</h1>
+<!-- BEGIN CONTENT -->
+<section id="content" class="clearfix">
+<!-- Title --><div id="content-title">Modeli</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Tip</th>
-    <th>Size</th>
-    <th>Available</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<!-- BEGIN LEFT CONTENT -->
+<section id="portfoliotile-left">
 
+<!-- BEGIN TILE CONTENT -->
+<div id="portfolio" class="clearfix centered">
+
+<!-- Link -->
 <% @models.each do |model| %>
-  <tr>
-    <td><%= model.name %></td>
-    <td><%= model.tip %></td>
-    <td><%= model.size %></td>
-    <td><%= model.available %></td>
-    <td><%= model.description %></td>
-    <td><%= link_to 'Show', model %></td>
-    <td><%= link_to 'Edit', edit_model_path(model) %></td>
-    <td><%= link_to 'Destroy', model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+	<div class="tile large illustration">
+    <a href="home.html">
+    <div class="pl-projecttitle"><span class="pl-title"><%= model.name %><br>test</span></div>
+    <img class="tile-pre-img" src="<%=asset_path model.photo %>" alt="Project 1" />
+    </a>
+    </div>
 <% end %>
-</table>
+<!-- Kraj linka -->
 
-<br />
 
-<%= link_to 'New Model', new_model_path %>
+<%= link_to "Profile", :controller => "profiles", :action => "show", :id => @profile%>
+
+    
+</div><!-- end #portfolio -->
+<!-- END TILE CONTENT -->
+</section>
+<!-- END LEFT CONTENT -->
