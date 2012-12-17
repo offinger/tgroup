@@ -3,10 +3,6 @@ require File.expand_path('../application', __FILE__)
 
 
 # Initialize the rails application
+ActiveSupport::Deprecation.silenced = true 
 
-# Initialize the rails application
-ActiveSupport::Deprecation.silence do
-  Tgroup::Application.initialize!
-end
-
-
+Tgroup::Application.initialize!
