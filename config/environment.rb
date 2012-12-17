@@ -4,4 +4,9 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
 
-Tgroup::Application.initialize!
+# Initialize the rails application
+ActiveSupport::Deprecation.silence do
+  Tgrouo::Application.initialize!
+end
+
+
