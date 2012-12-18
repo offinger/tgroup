@@ -23,7 +23,7 @@ gem "carrierwave"
 
 gem "rake", "0.8.7"
 
-gem 'delayed_job'
+
 
 
 # Gems used only for assets and not required
