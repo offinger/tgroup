@@ -9,6 +9,8 @@ class CreateModels < ActiveRecord::Migration
       t.string :size
       t.string :available
       t.text :description
+      t.integer :brend_id
+      
 
       t.timestamps
     end
