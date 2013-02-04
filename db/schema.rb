@@ -59,12 +59,10 @@ ActiveRecord::Schema.define(:version => 20121208163548) do
     t.string   "size"
     t.string   "available"
     t.text     "description"
-    t.integer  "brend_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "brend_id"
     t.string   "photo"
   end
-
-  add_index "models", ["brend_id"], :name => "index_models_on_brend_id"
 
 end
