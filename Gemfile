@@ -7,13 +7,10 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :production do
-  gem 'pg'
-end        
 
-group :development, :test do
-  gem 'sqlite3'
-end
+  gem 'pg'
+    
+
 
 gem 'activeadmin'
 
@@ -23,7 +20,7 @@ gem "carrierwave"
 
 #gem "rake", "0.8.7"
 
-gem "rake", "10.0.3"
+#gem "rake", "10.0.3"
 
 
 
