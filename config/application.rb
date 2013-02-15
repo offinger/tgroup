@@ -67,7 +67,13 @@ module Tgroup
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #   
  
- config.autoload_paths += "#{Rails.root}/app/uploaders"
+ #config.autoload_paths += "#{Rails.root}/app/uploaders"
+ 
+ initializer :after_append_asset_paths, 
+               :group => :all, 
+               :after => :append_assets_path do
+      config.assets.paths.unshift Rails.root.join("app", "uploaders").to_s
+   end
  
   
     initializer :after_append_asset_paths, 
