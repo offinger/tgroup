@@ -1,7 +1,6 @@
 Tgroup::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-###brisi ovo posle
-config.active_support.deprecation = :silence
+
 
   # Code is not reloaded between requests
   config.cache_classes = true
